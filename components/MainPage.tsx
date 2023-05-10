@@ -83,10 +83,10 @@ export const MainPage = () => {
         ? <>
         {chatsState.currentChat
           ? (
-            <View style={styles.messages}>
+            <View style={{ height: keyboardShown ? '55%' : '100%' }}>
               <Messages messages={chatsState.currentChat.messages}/>
               <InputWithButton
-                styles={{ position: 'absolute', bottom: keyboardShown ? '45%' : 0 }}
+                // styles={{ position: 'absolute', bottom: keyboardShown ? '45%' : 0 }}
                 value={inputValue}
                 onChangeText={setInputValue}
                 onSend={onSend}
@@ -107,6 +107,7 @@ export const MainPage = () => {
                 }
                 return (
                   <Swipeable
+                    key={chat.id}
                     renderLeftActions={LeftSwipeActions}
                     onSwipeableLeftOpen={() => handleDeleteChatSwipe(chat.id)}
                   >
@@ -140,9 +141,6 @@ const styles = StyleSheet.create({
     backgroundColor: Color.BASE_WHITE,
     height: '80%',
     flex: 1,
-  },
-  messages: {
-    height: '100%',
   },
   button: {
     position: 'absolute',

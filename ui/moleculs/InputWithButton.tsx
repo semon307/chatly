@@ -4,19 +4,19 @@ import { Button } from '../atoms/Button';
 import { Color } from '../colors/Color';
 
 type InputWithButtonProps = {
-  styles?: {
-    position: string;
-    bottom: number | string;
-  }
+  // styles?: {
+  //   position: string;
+  //   bottom: number | string;
+  // }
   value: string;
   onChangeText: (value: string) => void;
   onSend: () => void;
 } & TextInputProps;
 
 export const InputWithButton: FC<InputWithButtonProps> = (props) => {
-  const customStyle = props.styles ? props.styles : {};
+  // const customStyle = props.styles ? props.styles : {};
   return (
-    <View style={{ ...styles.inputContainer, ...customStyle }}>
+    <View style={styles.inputContainer}>
       <TextInput
         style={styles.input}
         value={props.value}
@@ -31,7 +31,7 @@ export const InputWithButton: FC<InputWithButtonProps> = (props) => {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    // bottom: 10,
+    bottom: 0,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,

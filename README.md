@@ -20,16 +20,24 @@ Chatly allows you to chat with various funny animals.
 <li>Redux Toolkit</li>
 <li>React Native gesture handler</li>
 
+## Requirements
+
+- Node.js (recommended version)
+- Expo CLI (installed globally)
+- iOS Simulator или Android Emulator (for running using simulator or emilator)
+
+
 ## How to Use
 1. Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/semon307/chatly_1.git 
+git clone https://github.com/semon307/chatly.git 
 ```
+
 2. Navigate to the root directory of the project::
 
 ```bash
-cd sport-events-app 
+cd chatly 
 ```
 
 3. Install the dependencies using the following command:
@@ -41,8 +49,13 @@ npm install
 4. Start the development server using the following command::
 
 ```bash
-npm start
+expo start
 ```
 
+6. If you wish to run this application on iOS simulator, it is possible to run::
+
+```bash
+expo start --ios
+```
 ## Author
-Sports Events Tracker was developed by Semen Kozhin: <br/>https://www.linkedin.com/in/semen-kozhin-4a1a22127/.
+Chatly was developed by Semen Kozhin: <br/>https://www.linkedin.com/in/semen-kozhin-4a1a22127/.

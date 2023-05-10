@@ -22,7 +22,7 @@ export const Header = () => {
     <View style={styles.header}>
       {currentChat && (
         <View style={styles.buttonBlock}>
-          <Link onPress={handleArrowBackPress} title={'←'}/>
+          <Link onPress={handleArrowBackPress} title={'❮'}/>
           <EditableChatPreview
             onEditChatName={handleEditChatName}
             avatar={currentChat.sender.avatarSrc}
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     gap: 1,
     alignItems: 'center',
+    paddingLeft: 10,
   }
 })
 

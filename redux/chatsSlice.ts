@@ -8,7 +8,7 @@ const initialState: ChatState = {
   chats: [],
   currentChat: null,
 };
-
+// redux toolkit slice for state storage and CRUD methods
 const chatsSlice = createSlice({
   name: "chats",
   initialState,
